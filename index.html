@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgroAeroTech Azərbaycan | Dron Xidmətləri və PUA Təlim Mərkəzi</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/img/favicon/favicon.png">
+  <meta name="description"
+    content="AgroAeroTech - Azərbaycanda kənd təsərrüfatı dron xidmətləri, PUA dərmanlama, dron sertifikatı təlimi və operator kursları. Bakı, Gəncə, Sumqayıt.">
+  <meta name="keywords"
+    content="dron xidmətləri Azərbaycan, PUA dərmanlama, kənd təsərrüfatı dron, dron sertifikatı, PUA təlimi, AgroAeroTech, dron ilaçlama, bitki müalicəsi, dron kursu Bakı">
+  <meta name="author" content="AgroAeroTech">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://agroaerotech.com/" />
+
+  <!-- Hreflang for multilingual SEO -->
+  <link rel="alternate" hreflang="az" href="https://agroaerotech.com/" />
+  <link rel="alternate" hreflang="tr" href="https://agroaerotech.com/" />
+  <link rel="alternate" hreflang="en" href="https://agroaerotech.com/" />
+  <link rel="alternate" hreflang="ru" href="https://agroaerotech.com/" />
+  <link rel="alternate" hreflang="x-default" href="https://agroaerotech.com/" />
+
+  <!-- Structured Data (Schema.org) for Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "AgroAeroTech",
+    "alternateName": "AgroAero Tech MMC",
+    "url": "https://agroaerotech.com",
+    "logo": "https://agroaerotech.com/assets/img/logo-agroaerotech.png",
+    "description": "Azərbaycanda kənd təsərrüfatı dron xidmətləri, PUA dərmanlama, dron sertifikatı təlimi və operator kursları",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Alaskar Gayibov St",
+      "addressLocality": "Bakı",
+      "addressCountry": "AZ"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+994103314875",
+      "contactType": "customer service",
+      "email": "info@agroaerotech.com",
+      "availableLanguage": ["az", "tr", "en", "ru"]
+    },
+    "sameAs": [
+      "https://www.facebook.com/people/AgroAero-Tech/61575199386431/",
+      "https://www.instagram.com/agroaero.tech",
+      "https://www.tiktok.com/@agroaerotech",
+      "https://www.linkedin.com/company/agroaero-tech/"
+    ],
+    "areaServed": {
+      "@type": "Country",
+      "name": "Azerbaijan"
+    },
+    "knowsAbout": ["Dron xidmətləri", "PUA dərmanlama", "Kənd təsərrüfatı dron", "Dron sertifikatı", "PUA təlimi"]
+  }
+  </script>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="AgroAeroTech | Dron Xidmətləri və PUA Təlim Mərkəzi">
+  <meta property="og:description"
+    content="Kənd təsərrüfatı, sənaye və təhlükəsizlik sahələrində dron texnologiyaları. Peşəkar PUA həlləri və dron pilot təlimləri.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://agroaerotech.com">
+  <meta property="og:image" content="https://agroaerotech.com/assets/img/logo-agroaerotech.png">
+  <meta property="og:locale" content="az_AZ">
+  <meta property="og:site_name" content="AgroAeroTech">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AgroAeroTech | Dron Xidmətləri və PUA Təlim Mərkəzi">
+  <meta name="twitter:description" content="Kənd təsərrüfatı, sənaye və təhlükəsizlik sahələrində dron texnologiyaları. Peşəkar PUA həlləri və dron pilot təlimləri.">
+  <meta name="twitter:image" content="https://agroaerotech.com/assets/img/logo-agroaerotech.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="assets/css/custom.css" rel="stylesheet">
+  <link href="assets/css/cursor-effects.css" rel="stylesheet">
+
+  <!-- Video Preload -->
+  <link rel="preload" href="assets/videos/hero-video-poster.png" as="image" fetchpriority="high">
+
+  <!-- Prefetch - Sonraki sayfaları arka planda yükle -->
+  <link rel="prefetch" href="services/agricultural-solutions.html">
+  <link rel="prefetch" href="services/industrial-solutions.html">
+
+  <style>
+    .hero-section {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .hero-video-bg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+    }
+
+    html,
+    body {
+      overflow-x: hidden;
+    }
+
+    @media (max-width: 575.98px) {
+      .hero-section .btn {
+        max-width: 320px;
+        width: 100%;
+      }
+    }
+
+    /* =============================================== */
+    /* ÖZEL BUTON STİLİ */
+    /* =============================================== */
+    .btn-custom-dark {
+      background-color: #212529;
+      /* Siyah arka plan */
+      color: #fff;
+      /* Beyaz yazı */
+      border: 2px solid #fff;
+      /* Beyaz çerçeve */
+      transition: all 0.3s ease;
+      /* Yumuşak geçiş efekti */
+    }
+
+    .btn-custom-dark:hover,
+    .btn-custom-dark:focus {
+      background-color: #fff;
+      /* Üzerine gelince beyaz arka plan */
+      color: #212529;
+      /* Üzerine gelince siyah yazı */
+      border-color: #fff;
+    }
+  </style>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CSCL2KYTFF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-CSCL2KYTFF');
+  </script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm" aria-label="Ana Gezinti Menüsü">
+    <div class="container">
+      <a class="navbar-brand me-auto" href="index.html" title="AgroAeroTech Anasayfa">
+        <img src="assets/img/logo-agroaerotech.png" alt="AgroAeroTech Logo">
+      </a>
+
+      <!-- Mobil üstte küçük buton -->
+      <a href="/contact.html" class="btn-contact btn-sm d-lg-none me-2" data-translate="nav-contact">Bize Ulaşın</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Gezinti menüsünü aç/kapat">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <!-- Menü -->
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="/" aria-current="page" data-translate="nav-home">Anasayfa</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span data-translate="nav-services">Hizmetlerimiz</span> <i
+                class="fas fa-chevron-down dropdown-indicator ms-2"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/services/agricultural-solutions.html"
+                  data-translate="nav-agricultural-solutions">Drone ile Tarımsal Çözümler</a></li>
+              <li><a class="dropdown-item" href="/services/industrial-solutions.html"
+                  data-translate="nav-industrial-solutions">Drone ile Endüstriyel Çözümler</a></li>
+              <li><a class="dropdown-item" href="/services/drone-event-services.html"
+                  data-translate="nav-event-services">Drone ile Etkinlik Hizmetleri</a></li>
+              <li><a class="dropdown-item" href="/services/drone-technical-service.html"
+                  data-translate="nav-technical-service">Drone Teknik Servis ve Bakım</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="egitimMenu" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <span data-translate="nav-education">Eğitim</span> <i
+                class="fas fa-chevron-down dropdown-indicator ms-2"></i>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="egitimMenu">
+              <li><a class="dropdown-item" href="/education/certification-training.html"
+                  data-translate="nav-certification-education">Sertifikasyon Eğitimi</a></li>
+              <li><a class="dropdown-item" href="/education/agricultural-drone-training.html"
+                  data-translate="nav-agricultural-drone-education">Tarımsal Drone Eğitimi</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <span data-translate="nav-corporate">Kurumsal</span> <i
+                class="fas fa-chevron-down dropdown-indicator ms-2"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/about.html" data-translate="nav-about">Hakkımızda ve Tarihçemiz</a>
+              </li>
+              <li><a class="dropdown-item" href="/references.html" data-translate="nav-references">Referanslarımız</a>
+              </li>
+              <li><a class="dropdown-item" href="/blog.html" data-translate="nav-blog">Blog</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/certificate-verification.html" data-translate="nav-certificate">Sertifika Sorgulama</a>
+          </li>
+
+          <!-- Mobil Dil Seçici -->
+          <li class="nav-item d-lg-none">
+            <div class="language-selector dropdown">
+              <a class="dropdown-toggle nav-link" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <img src="assets/img/flags/tr.svg" alt="Türkçe" class="flag-icon" id="currentFlagMobile">
+                <span id="currentLangMobile">Türkçe</span>
+                <i class="fas fa-chevron-down ms-auto" style="font-size: 0.7rem;"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item active" href="#" data-lang="tr" data-flag="tr.svg">
+                    <img src="assets/img/flags/tr.svg" alt="Türkçe" class="flag-icon">
+                    Türkçe
+                  </a></li>
+                <li><a class="dropdown-item" href="#" data-lang="en" data-flag="en.svg">
+                    <img src="assets/img/flags/en.svg" alt="English" class="flag-icon">
+                    English
+                  </a></li>
+                <li><a class="dropdown-item" href="#" data-lang="ru" data-flag="ru.svg">
+                    <img src="assets/img/flags/ru.svg" alt="Русский" class="flag-icon">
+                    Русский
+                  </a></li>
+                <li><a class="dropdown-item" href="#" data-lang="az" data-flag="az.svg">
+                    <img src="assets/img/flags/az.svg" alt="Azərbaycan" class="flag-icon">
+                    Azərbaycan
+                  </a></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+
+        <!-- DESKTOP: sağ üst buton grubu -->
+        <div class="d-none d-lg-flex gap-2 ms-lg-3 align-items-center">
+          <!-- Dil Seçici -->
+          <div class="language-selector dropdown">
+            <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+              id="languageSelector">
+              <img src="assets/img/flags/tr.svg" alt="Türkçe" class="flag-icon" id="currentFlag">
+              <span id="currentLang">TR</span>
+              <i class="fas fa-chevron-down ms-1" style="font-size: 0.7rem;"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item active" href="#" data-lang="tr" data-flag="tr.svg">
+                  <img src="assets/img/flags/tr.svg" alt="Türkçe" class="flag-icon">
+                  Türkçe
+                </a></li>
+              <li><a class="dropdown-item" href="#" data-lang="en" data-flag="en.svg">
+                  <img src="assets/img/flags/en.svg" alt="English" class="flag-icon">
+                  English
+                </a></li>
+              <li><a class="dropdown-item" href="#" data-lang="ru" data-flag="ru.svg">
+                  <img src="assets/img/flags/ru.svg" alt="Русский" class="flag-icon">
+                  Русский
+                </a></li>
+              <li><a class="dropdown-item" href="#" data-lang="az" data-flag="az.svg">
+                  <img src="assets/img/flags/az.svg" alt="Azərbaycan" class="flag-icon">
+                  Azərbaycan
+                </a></li>
+            </ul>
+          </div>
+          <a href="/contact.html" class="btn-contact btn-sm d-inline-flex align-items-center"
+            data-translate="nav-contact">Bize Ulaşın</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <video playsinline autoplay muted loop preload="auto" class="hero-video-bg" poster="assets/videos/hero-video-poster.png">
+      <source src="assets/videos/hero-video.mp4" type="video/mp4">
+      Tarayıcınız video etiketini desteklemiyor.
+    </video>
+    <div class="hero-overlay position-absolute top-0 start-0 w-100 h-100"></div>
+
+    <div class="container position-relative">
+      <div class="row">
+        <div class="col-lg-8 mx-auto text-center text-white">
+          <h1 class="display-4 fw-bold mb-4" data-aos="fade-up" data-translate="hero-title">
+            İHA Teknolojilerinde Geleceği Şekillendiriyoruz
+          </h1>
+          <p class="lead mb-5" data-aos="fade-up" data-aos-delay="200" data-translate="hero-subtitle">
+            AgroAero Tech MMC, tarım, endüstri ve güvenlik sektörlerinde yenilikçi insansız hava aracı (İHA) çözümleri
+            ile geleceğin standartlarını belirliyor.
+          </p>
+          <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center align-items-center" data-aos="fade-up"
+            data-aos-delay="400">
+            <a href="/services/agricultural-solutions.html#slide4" class="btn btn-brand btn-lg px-4">
+              <i class="fa-solid fa-seedling me-2" aria-hidden="true"></i><span data-translate="hero-cta-service">Tarım
+                Hizmeti Al</span>
+            </a>
+            <a href="/education/certification-training.html" class="btn btn-outline-light btn-lg px-4">
+              <i class="fa-solid fa-graduation-cap me-2" aria-hidden="true"></i><span
+                data-translate="hero-cta-education">Drone Eğitimi Al</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="display-5 fw-bold mb-3" data-aos="fade-up" data-translate="services-title">Hizmetlerimiz</h2>
+          <p class="lead text-muted" data-aos="fade-up" data-aos-delay="100" data-translate="services-subtitle">
+            Tarımsal verimliliği artıran drone teknolojileri
+          </p>
+        </div>
+      </div>
+
+      <!-- Tarımsal Çözümler -->
+      <div class="row mb-5">
+        <div class="col-12">
+          <h3 class="h4 fw-bold mb-4 text-center" data-translate="services-main-title">Drone ile Tarımsal Çözümler</h3>
+        </div>
+      </div>
+
+      <section id="scroll-1" class="mb-5">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+            <h4 class="fw-bold mb-3" data-translate="service-spraying-title">Drone ile İlaçlama Çözümleri</h4>
+            <p class="text-muted mb-4" data-translate="service-spraying-desc">
+              Tarımsal üretimde yüksek verimlilik, düşük maliyet ve çevre dostu uygulamalar için akıllı İHA (drone)
+              teknolojileri ile hassas ilaçlama hizmeti sunuyoruz.
+            </p>
+            <ul class="list-unstyled">
+              <li class="mb-2"><i class="fas fa-check text-success me-2"></i><strong
+                  data-translate="service-spraying-feature1">Hassas İlaçlama
+                  Teknolojisi</strong> - <span data-translate="service-spraying-feature1-desc">DJI Agras serisi tarım
+                  dronlarımız, bitkinin ihtiyacına göre hassas püskürtme
+                  yaparak ilaçların en doğru şekilde uygulanmasını sağlar</span></li>
+              <li class="mb-2"><i class="fas fa-check text-success me-2"></i><strong
+                  data-translate="service-spraying-feature2">%30'a Kadar Kimyasal
+                  Tasarrufu</strong> - <span data-translate="service-spraying-feature2-desc">Akıllı püskürtme sistemleri
+                  sayesinde tarım ilacı ve pestisit kullanımı en aza
+                  indirgenir</span></li>
+              <li class="mb-2"><i class="fas fa-check text-success me-2"></i><strong
+                  data-translate="service-spraying-feature3">Hızlı ve Etkili Uygulama</strong> -
+                <span data-translate="service-spraying-feature3-desc">Geniş alanların kısa sürede ilaçlanması, engebeli
+                  arazilerde bile eşit dağılım</span>
+              </li>
+              <li class="mb-2"><i class="fas fa-check text-success me-2"></i><strong
+                  data-translate="service-spraying-feature4">Çevre Dostu ve Sürdürülebilir
+                  Tarım</strong> - <span data-translate="service-spraying-feature4-desc">Doğru dozaj ve kontrollü
+                  uygulama ile çevreye verilen zarar en aza iner</span></li>
+            </ul>
+            <p class="text-muted small mb-4" data-translate="service-spraying-footer">
+              AgroAero Tech MMC, modern drone teknolojisi ile çiftçilerimize daha güvenli, verimli ve kazançlı bir tarım
+              geleceği sunuyor.
+            </p>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left">
+            <img src="assets/img/T50&25-2.webp" alt="Drone İlaçlama" class="img-fluid rounded shadow mb-3">
+            <a class="btn btn-outline-brand btn-lg w-100"
+              href="/services/agricultural-solutions.html?service=ilaclama#slide4">
+              <i class="fa-solid fa-droplet me-2"></i><span data-translate="service-spraying-cta">Drone ile İlaçlama
+                Hizmeti Al</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="scroll-2" class="mb-5">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0" data-aos="fade-left">
+            <h4 class="fw-bold mb-3" data-translate="service-fertilizing-title">Drone ile Gübreleme ve Tohumlama
+              Çözümleri</h4>
+            <p class="text-muted mb-4" data-translate="service-fertilizing-desc">
+              Modern tarımda yüksek verim ve düşük maliyet için drone destekli gübreleme çözümleri sunuyoruz.
+            </p>
+            <ul class="list-unstyled">
+              <li class="mb-2"><i class="fas fa-check text-success me-2"></i><strong
+                  data-translate="service-fertilizing-feature1">Hassas Dağılım Teknolojisi</strong>
+                - <span data-translate="service-fertilizing-feature1-desc">GPS ve akıllı püskürtme sistemleri ile her
+                  karışıma eşit gübre uygulanmasını sağlar</span></li>
+              <li class="mb-2"><i class="fas fa-check text-success me-2"></i><strong
+                  data-translate="service-fertilizing-feature2">Maliyet ve Kaynak
+                  Tasarrufu</strong> - <span data-translate="service-fertilizing-feature2-desc">Geleneksel yöntemlere
+                  kıyasla %20'ye kadar daha az gübre kullanımı, iş gücü ve
+                  zaman tasarrufu</span></li>
+              <li class="mb-2"><i class="fas fa-check text-success me-2"></i><strong
+                  data-translate="service-fertilizing-feature3">Hızlı ve Verimli Uygulama</strong>
+                - <span data-translate="service-fertilizing-feature3-desc">Büyük araziler kısa sürede gübrelenir,
+                  engebeli arazilerde dahi sorunsuz çalışma</span></li>
+              <li class="mb-2"><i class="fas fa-check text-success me-2"></i><strong
+                  data-translate="service-fertilizing-feature4">Sürdürülebilir Tarım
+                  Çözümü</strong> - <span data-translate="service-fertilizing-feature4-desc">Doğru dozaj, doğru
+                  zamanlama ve çevre dostu yaklaşım ile toprak yapısı korunur</span></li>
+            </ul>
+            <p class="text-muted small mb-4" data-translate="service-fertilizing-footer">
+              AgroAero Tech MMC, drone ile gübreleme çözümleri sayesinde çiftçilerimize daha yüksek verim,
+              daha düşük maliyet ve sürdürülebilir bir tarım geleceği sunuyor.
+            </p>
+          </div>
+          <div class="col-lg-6 order-lg-1" data-aos="fade-right">
+            <img src="assets/img/scroll-1.webp" alt="Drone Gübreleme" class="img-fluid rounded shadow mb-3">
+            <a class="btn btn-outline-brand btn-lg w-100"
+              href="/services/agricultural-solutions.html?service=gubreleme#slide4">
+              <i class="fas fa-seedling me-2"></i><span data-translate="service-fertilizing-cta">Gübreleme ve Tohumlama
+                Hizmeti Al</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="scroll-3" class="mb-5">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+            <h4 class="fw-bold mb-3" data-translate="service-analysis-title">Bitki Sağlığı ve Verimlilik Analizi</h4>
+            <p class="text-muted mb-4" data-translate="service-analysis-desc">
+              Tarımda verimliliği artırmak ve ürün kayıplarını en aza indirmek için multispektral kamera teknolojisi ile
+              bitki sağlığı analizi yapıyoruz.
+            </p>
+            <ul class="list-unstyled">
+              <li class="mb-2"><i class="fas fa-check text-success me-2"></i><strong
+                  data-translate="service-analysis-feature1">Multispektral Görüntüleme</strong>
+                - <span data-translate="service-analysis-feature1-desc">Bitkilerin fotosentez kapasitesi, su stresi ve
+                  besin eksiklikleri farklı ışık spektrumlarıyla
+                  görüntülenir</span></li>
+              <li class="mb-2"><i class="fas fa-check text-success me-2"></i><strong
+                  data-translate="service-analysis-feature2">Erken Hastalık ve Zararlı
+                  Teşhisi</strong> - <span data-translate="service-analysis-feature2-desc">Gözle fark edilmeden önce
+                  yapraklardaki stres belirtileri saptanır</span></li>
+              <li class="mb-2"><i class="fas fa-check text-success me-2"></i><strong
+                  data-translate="service-analysis-feature3">Verim Optimizasyonu ve
+                  Tahmin</strong> - <span data-translate="service-analysis-feature3-desc">Verim tahminleri ve alan bazlı
+                  uygulama planları oluşturulur</span></li>
+              <li class="mb-2"><i class="fas fa-check text-success me-2"></i><strong
+                  data-translate="service-analysis-feature4">Sürdürülebilir Tarım
+                  Çözümleri</strong> - <span data-translate="service-analysis-feature4-desc">Daha az ilaç ve gübre
+                  kullanımı ile çevre korunur</span></li>
+            </ul>
+            <p class="text-muted small mb-4" data-translate="service-analysis-footer">
+              AgroAero Tech MMC, akıllı tarım teknolojileriyle çiftçilerimize daha sağlıklı ürünler ve yüksek verim için
+              güçlü bir yol arkadaşıdır.
+            </p>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left">
+            <img src="assets/img/bitki-analiz.png" alt="Drone Analiz" class="img-fluid rounded shadow mb-3">
+            <a class="btn btn-outline-brand btn-lg w-100"
+              href="/services/agricultural-solutions.html?service=analiz#slide4">
+              <i class="fas fa-chart-line me-2"></i><span data-translate="service-analysis-cta">Bitki Sağlığı ve
+                Verimlilik Analizi Hizmeti Al</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <div class="row mt-5 mb-4">
+        <div class="col-12">
+          <h3 class="h4 fw-bold text-center" data-translate="education-title">Eğitim Hizmetleri</h3>
+        </div>
+      </div>
+      <div class="row align-items-center footer-dark text-light p-4 rounded shadow-sm">
+        <div class="col-lg-8" data-aos="fade-right">
+          <h4 class="fw-bold mb-3" data-translate="education-drone-pilot">Drone Pilotu Eğitimi</h4>
+          <p class="text-white-50 mb-4" data-translate="education-drone-pilot-desc">
+            Onaylı drone pilotu eğitimlerimiz ile sertifikalı pilot olun.
+            Teorik ve pratik eğitimlerle profesyonel drone operatörü olma yolunda ilk adımı atın.
+          </p>
+          <ul class="list-unstyled">
+            <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span
+                data-translate="education-certified-program">Onaylı Sertifika Programı</span></li>
+            <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span
+                data-translate="education-theory-practice">Teorik ve Pratik Dersler</span></li>
+            <li class="mb-2"><i class="fas fa-check text-success me-2"></i><span
+                data-translate="education-expert-instructors">Uzman Eğitmen Kadrosu</span></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 text-center text-lg-end" data-aos="fade-left">
+          <!-- ======================================================= -->
+          <!-- DÜZELTME: Butonun sınıfı "btn-custom-dark" olarak değiştirildi -->
+          <!-- ======================================================= -->
+          <a href="/education/certification-training.html" class="btn btn-outline-light btn-lg px-5 py-3 mt-3 mt-lg-0">
+            <i class="fas fa-graduation-cap me-2"></i><span data-translate="learn-more">Detaylı Bilgi Al</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- References Section -->
+  <section class="py-5 references-section">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-lg-8 mx-auto text-center">
+          <h2 class="display-5 fw-bold mb-3" data-aos="fade-up" data-translate="references-title">Referanslarımız</h2>
+          <p class="lead text-muted" data-aos="fade-up" data-aos-delay="100" data-translate="references-subtitle">
+            Güvenilir iş ortaklarımız.
+          </p>
+        </div>
+      </div>
+
+      <div class="row justify-content-center align-items-center g-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="col-lg-2 col-md-3 col-4 text-center">
+          <a href="https://www.mktcotton.com/" target="_blank" title="Prime Cotton">
+            <img src="assets/img/referanslar/prime-cotton.png" alt="Prime Cotton"
+              class="img-fluid opacity-75 hover-opacity-100">
+          </a>
+        </div>
+        <div class="col-lg-2 col-md-3 col-4 text-center">
+          <a href="https://www.azersun.com/az" target="_blank" title="Azersun">
+            <img src="assets/img/referanslar/azersun.png" alt="Azersun" class="img-fluid opacity-75 hover-opacity-100">
+          </a>
+        </div>
+        <div class="col-lg-2 col-md-3 col-4 text-center">
+          <a href="https://www.astaraduyu.az/" target="_blank" title="Astara Düyü">
+            <img src="assets/img/referanslar/astara-duyu.png" alt="Astara Düyü"
+              class="img-fluid opacity-75 hover-opacity-100">
+          </a>
+        </div>
+        <div class="col-lg-2 col-md-3 col-4 text-center">
+          <a href="https://betatea.com/" target="_blank" title="Beta Tea">
+            <img src="assets/img/referanslar/beta-tea.png" alt="Beta Tea"
+              class="img-fluid opacity-75 hover-opacity-100">
+          </a>
+        </div>
+        <div class="col-lg-2 col-md-3 col-4 text-center">
+          <a href="https://www.azerishiq.az/" target="_blank" title="Azerışık">
+            <img src="assets/img/referanslar/azerisiq.png" alt="Azerışık"
+              class="img-fluid opacity-75 hover-opacity-100">
+          </a>
+        </div>
+        <div class="col-lg-2 col-md-3 col-4 text-center">
+          <a href="https://www.kraunkor.az/" target="_blank" title="Kraun Ko-R">
+            <img src="assets/img/referanslar/kraun-kor.png" alt="Kraun Ko-R"
+              class="img-fluid opacity-75 hover-opacity-100">
+          </a>
+        </div>
+        <div class="col-lg-2 col-md-3 col-4 text-center">
+          <a href="https://www.azeraholding.az/" target="_blank" title="Azera Holding">
+            <img src="assets/img/referanslar/azera-holding.png" alt="Azera Holding"
+              class="img-fluid opacity-75 hover-opacity-100">
+          </a>
+        </div>
+        <div class="col-lg-2 col-md-3 col-4 text-center">
+          <a href="https://saraleasing.az/" target="_blank" title="Sara Lizinq">
+            <img src="assets/img/referanslar/sara-lizinq.png" alt="Sara Lizinq"
+              class="img-fluid opacity-75 hover-opacity-100">
+          </a>
+        </div>
+        <div class="col-lg-2 col-md-3 col-4 text-center">
+          <a href="https://agroland.az/" target="_blank" title="Agroland">
+            <img src="assets/img/referanslar/agroland.png" alt="Agroland"
+              class="img-fluid opacity-75 hover-opacity-100">
+          </a>
+        </div>
+        <div class="col-lg-2 col-md-3 col-4 text-center">
+          <a href="https://enterprise.dji.com/" target="_blank" title="Enterprise">
+            <img src="assets/img/referanslar/dji-enterprise.png" alt="Enterprise"
+              class="img-fluid opacity-75 hover-opacity-100">
+          </a>
+        </div>
+        <div class="col-lg-2 col-md-3 col-4 text-center">
+          <a href="https://ag.dji.com/" target="_blank" title="Agriculture">
+            <img src="assets/img/referanslar/dji-agriculture.png" alt="Agriculture"
+              class="img-fluid opacity-75 hover-opacity-100">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-dark py-5">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Şirket Bilgisi -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="fw-bold mb-3">AgroAeroTech</h5>
+          <p class="text-muted" data-translate="footer-company-desc">İHA teknolojilerinde öncü, eğitimde güvenilir.
+            Geleceğin havacılık teknolojilerini
+            bugünden deneyimleyin.</p>
+          <div class="d-flex gap-3 mt-3">
+            <a href="https://www.facebook.com/people/AgroAero-Tech/61575199386431/" class="social-icon" target="_blank"
+              title="Facebook"><i class="fab fa-facebook-f fa-lg"></i></a>
+            <a href="https://www.instagram.com/agroaero.tech?igsh=bTlndmZuYW1yZzl5" class="social-icon" target="_blank"
+              title="Instagram"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="https://www.tiktok.com/@agroaerotech?_t=ZS-8z4hgtv6Ep2&_r=1" class="social-icon" target="_blank"
+              title="TikTok"><i class="fab fa-tiktok fa-lg"></i></a>
+            <a href="https://www.linkedin.com/company/agroaero-tech/" class="social-icon" target="_blank"
+              title="LinkedIn"><i class="fab fa-linkedin-in fa-lg"></i></a>
+          </div>
+        </div>
+
+        <!-- Hizmetlerimiz -->
+        <div class="col-lg-2 col-md-4">
+          <h5 class="fw-bold mb-3" data-translate="nav-services">Hizmetlerimiz</h5>
+          <ul class="list-unstyled footer-links">
+            <li class="mb-2"><a href="/services/agricultural-solutions.html" data-translate="nav-agricultural-solutions">Tarımsal Çözümler</a></li>
+            <li class="mb-2"><a href="/services/industrial-solutions.html" data-translate="nav-industrial-solutions">Endüstriyel Çözümler</a></li>
+            <li class="mb-2"><a href="/services/drone-event-services.html" data-translate="nav-event-services">Etkinlik Hizmetleri</a></li>
+            <li class="mb-2"><a href="/services/drone-technical-service.html" data-translate="nav-technical-service">Teknik Servis ve Bakım</a></li>
+          </ul>
+        </div>
+
+        <!-- Eğitim -->
+        <div class="col-lg-2 col-md-4">
+          <h5 class="fw-bold mb-3" data-translate="nav-education">Eğitim</h5>
+          <ul class="list-unstyled footer-links">
+            <li class="mb-2"><a href="/education/certification-training.html" data-translate="nav-certification-education">Sertifikasyon Eğitimi</a></li>
+            <li class="mb-2"><a href="/education/agricultural-drone-training.html" data-translate="nav-agricultural-drone-education">Tarımsal Drone Eğitimi</a></li>
+          </ul>
+        </div>
+
+        <!-- Kurumsal -->
+        <div class="col-lg-2 col-md-4">
+          <h5 class="fw-bold mb-3" data-translate="nav-corporate">Kurumsal</h5>
+          <ul class="list-unstyled footer-links">
+            <li class="mb-2"><a href="/about.html" data-translate="nav-about">Hakkımızda ve Tarihçemiz</a></li>
+            <li class="mb-2"><a href="/references.html" data-translate="nav-references">Referanslarımız</a></li>
+            <li class="mb-2"><a href="/blog.html" data-translate="nav-blog">Blog</a></li>
+            <li class="mb-2"><a href="/certificate-verification.html" data-translate="nav-certificate">Sertifika Sorgulama</a></li>
+            <li class="mb-2"><a href="/contact.html" data-translate="nav-contact">Bize Ulaşın</a></li>
+          </ul>
+        </div>
+
+        <!-- İletişim -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="fw-bold mb-3" data-translate="footer-contact">İletişim</h5>
+          <ul class="list-unstyled footer-links">
+            <li class="mb-3">
+              <i class="fas fa-phone me-2"></i>
+              <a href="tel:+994103314875">+994 10 331 48 75</a>
+            </li>
+            <li class="mb-3">
+              <i class="fas fa-envelope me-2"></i>
+              <a href="mailto:info@agroaerotech.com">info@agroaerotech.com</a>
+            </li>
+            <li class="mb-3">
+              <i class="fas fa-map-marker-alt me-2"></i>
+              <span>CVCH+J9P, Alaskar Gayibov St, Baku, Azerbaycan</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="my-4" style="border-color: rgba(255,255,255,0.15);">
+
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <p class="mb-0 text-muted">&copy; 2025 AgroAeroTech. <span data-translate="footer-copyright">Tüm hakları
+              saklıdır.</span></p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <a href="/legal/gizlilik-politikasi.html" class="footer-bottom-link" data-translate="footer-privacy">Gizlilik Politikası</a>
+          <span class="mx-2" style="color: rgba(255,255,255,0.3);">|</span>
+          <a href="/legal/kvkk-aydinlatma-metni.html" class="footer-bottom-link" data-translate="legal-kvkk-link">KVKK Aydınlatma Metni</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS Dosyaları -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="assets/js/cursor-effects.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // AOS'u başlat
+      AOS.init({
+        duration: 800,
+        once: true
+      });
+
+      var nav = document.querySelector('.navbar');
+      var collapse = document.getElementById('navbarNav');
+
+      function setNavH() {
+        if (!nav) return;
+        document.documentElement.style.setProperty('--nav-h', nav.offsetHeight + 'px');
+      }
+      setNavH();
+      window.addEventListener('resize', setNavH);
+
+      if (collapse) {
+        collapse.addEventListener('show.bs.collapse', function () {
+          document.body.classList.add('offcanvas-open');
+        });
+        collapse.addEventListener('hidden.bs.collapse', function () {
+          document.body.classList.remove('offcanvas-open');
+        });
+      }
+    });
+  </script>
+
+</body>
+
+</html>

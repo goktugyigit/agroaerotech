@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://agroaerotech.com/</loc>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="az" href="https://agroaerotech.com/" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://agroaerotech.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://agroaerotech.com/" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://agroaerotech.com/" />
+  </url>
+
+  <!-- Services - Agricultural Solutions -->
+  <url>
+    <loc>https://agroaerotech.com/services/agricultural-solutions.html</loc>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="az" href="https://agroaerotech.com/services/agricultural-solutions.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://agroaerotech.com/services/agricultural-solutions.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://agroaerotech.com/services/agricultural-solutions.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://agroaerotech.com/services/agricultural-solutions.html" />
+  </url>
+
+  <!-- Services - Industrial Solutions -->
+  <url>
+    <loc>https://agroaerotech.com/services/industrial-solutions.html</loc>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="az" href="https://agroaerotech.com/services/industrial-solutions.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://agroaerotech.com/services/industrial-solutions.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://agroaerotech.com/services/industrial-solutions.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://agroaerotech.com/services/industrial-solutions.html" />
+  </url>
+
+  <!-- Services - Drone Event Services -->
+  <url>
+    <loc>https://agroaerotech.com/services/drone-event-services.html</loc>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="az" href="https://agroaerotech.com/services/drone-event-services.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://agroaerotech.com/services/drone-event-services.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://agroaerotech.com/services/drone-event-services.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://agroaerotech.com/services/drone-event-services.html" />
+  </url>
+
+  <!-- Services - Drone Technical Service -->
+  <url>
+    <loc>https://agroaerotech.com/services/drone-technical-service.html</loc>
+    <lastmod>2025-10-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="az" href="https://agroaerotech.com/services/drone-technical-service.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://agroaerotech.com/services/drone-technical-service.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://agroaerotech.com/services/drone-technical-service.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://agroaerotech.com/services/drone-technical-service.html" />
+  </url>
+
+  <!-- Education - Certification Training -->
+  <url>
+    <loc>https://agroaerotech.com/education/certification-training.html</loc>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="az" href="https://agroaerotech.com/education/certification-training.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://agroaerotech.com/education/certification-training.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://agroaerotech.com/education/certification-training.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://agroaerotech.com/education/certification-training.html" />
+  </url>
+
+  <!-- Education - Agricultural Drone Training -->
+  <url>
+    <loc>https://agroaerotech.com/education/agricultural-drone-training.html</loc>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="az" href="https://agroaerotech.com/education/agricultural-drone-training.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://agroaerotech.com/education/agricultural-drone-training.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://agroaerotech.com/education/agricultural-drone-training.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://agroaerotech.com/education/agricultural-drone-training.html" />
+  </url>
+
+  <!-- Education - Drone Pilot Training -->
+  <url>
+    <loc>https://agroaerotech.com/education/drone-pilot-training.html</loc>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="az" href="https://agroaerotech.com/education/drone-pilot-training.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://agroaerotech.com/education/drone-pilot-training.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://agroaerotech.com/education/drone-pilot-training.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://agroaerotech.com/education/drone-pilot-training.html" />
+  </url>
+
+  <!-- Certificate Verification -->
+  <url>
+    <loc>https://agroaerotech.com/certificate-verification.html</loc>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="az" href="https://agroaerotech.com/certificate-verification.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://agroaerotech.com/certificate-verification.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://agroaerotech.com/certificate-verification.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://agroaerotech.com/certificate-verification.html" />
+  </url>
+
+  <!-- About -->
+  <url>
+    <loc>https://agroaerotech.com/about.html</loc>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="az" href="https://agroaerotech.com/about.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://agroaerotech.com/about.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://agroaerotech.com/about.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://agroaerotech.com/about.html" />
+  </url>
+
+  <!-- References -->
+  <url>
+    <loc>https://agroaerotech.com/references.html</loc>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="az" href="https://agroaerotech.com/references.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://agroaerotech.com/references.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://agroaerotech.com/references.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://agroaerotech.com/references.html" />
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://agroaerotech.com/contact.html</loc>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="az" href="https://agroaerotech.com/contact.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://agroaerotech.com/contact.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://agroaerotech.com/contact.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://agroaerotech.com/contact.html" />
+  </url>
+
+  <!-- Blog -->
+  <url>
+    <loc>https://agroaerotech.com/blog.html</loc>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="az" href="https://agroaerotech.com/blog.html" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://agroaerotech.com/blog.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://agroaerotech.com/blog.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://agroaerotech.com/blog.html" />
+  </url>
+
+  <!-- Legal - Privacy Policy -->
+  <url>
+    <loc>https://agroaerotech.com/legal/gizlilik-politikasi.html</loc>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Legal - KVKK -->
+  <url>
+    <loc>https://agroaerotech.com/legal/kvkk-aydinlatma-metni.html</loc>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Legal - GDPR -->
+  <url>
+    <loc>https://agroaerotech.com/legal/gdpr-riza-metni.html</loc>
+    <lastmod>2025-10-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>

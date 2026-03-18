@@ -1,0 +1,69 @@
+# Sertifika Sorgulama
+/sertifika-sorgu.html /certificate-verification.html 301
+/sertifika-sorgu /certificate-verification.html 301
+
+# Kurumsal Sayfalar
+/kurumsal.html /about.html 301
+/kurumsal /about.html 301
+/hakkimizda.html /about.html 301
+/hakkimizda /about.html 301
+/referanslar.html /references.html 301
+/referanslar /references.html 301
+/referanslarimiz.html /references.html 301
+/referanslarimiz /references.html 301
+/bize-ulasin.html /contact.html 301
+/bize-ulasin /contact.html 301
+/iletisim.html /contact.html 301
+/iletisim /contact.html 301
+
+# Hizmetler
+/hizmetler/tarimsal-cozumler.html /services/agricultural-solutions.html 301
+/hizmetler/tarimsal-cozumler /services/agricultural-solutions.html 301
+/hizmetler/tarimsal-drone.html /services/agricultural-solutions.html 301
+/hizmetler/tarimsal-drone /services/agricultural-solutions.html 301
+/services/tarimsal-cozumler.html /services/agricultural-solutions.html 301
+/services/tarimsal-cozumler /services/agricultural-solutions.html 301
+/hizmetler/endustriyel-cozumler.html /services/industrial-solutions.html 301
+/hizmetler/endustriyel-cozumler /services/industrial-solutions.html 301
+/services/endustriyel-cozumler.html /services/industrial-solutions.html 301
+/services/endustriyel-cozumler /services/industrial-solutions.html 301
+/endustriyel-cozumler.html /services/industrial-solutions.html 301
+/endustriyel-cozumler /services/industrial-solutions.html 301
+
+# Etkinlik Hizmetleri
+/hizmetler/etkinlik-hizmetleri.html /services/drone-event-services.html 301
+/hizmetler/etkinlik-hizmetleri /services/drone-event-services.html 301
+/services/etkinlik-hizmetleri.html /services/drone-event-services.html 301
+/services/etkinlik-hizmetleri /services/drone-event-services.html 301
+/drone-gosterisi.html /services/drone-event-services.html 301
+/drone-gosterisi /services/drone-event-services.html 301
+/suru-drone.html /services/drone-event-services.html 301
+/suru-drone /services/drone-event-services.html 301
+
+# Eğitim Sayfaları
+/egitim/sertifikasyon-egitimi.html /education/certification-training.html 301
+/egitim/sertifikasyon-egitimi /education/certification-training.html 301
+/egitim/sertifika-egitimi.html /education/certification-training.html 301
+/egitim/sertifika-egitimi /education/certification-training.html 301
+/education/sertifikasyon-egitimi.html /education/certification-training.html 301
+/education/sertifikasyon-egitimi /education/certification-training.html 301
+/egitim/tarimsal-drone-egitimi.html /education/agricultural-drone-training.html 301
+/egitim/tarimsal-drone-egitimi /education/agricultural-drone-training.html 301
+/egitim/tarim-drone-egitimi.html /education/agricultural-drone-training.html 301
+/egitim/tarim-drone-egitimi /education/agricultural-drone-training.html 301
+/education/tarimsal-drone-egitimi.html /education/agricultural-drone-training.html 301
+/education/tarimsal-drone-egitimi /education/agricultural-drone-training.html 301
+/egitim/drone-pilot-egitimi.html /education/drone-pilot-training.html 301
+/egitim/drone-pilot-egitimi /education/drone-pilot-training.html 301
+/education/drone-pilot-egitimi.html /education/drone-pilot-training.html 301
+/education/drone-pilot-egitimi /education/drone-pilot-training.html 301
+
+
+
+# Ana Sayfa Alternatifleri
+/anasayfa.html /index.html 301
+/anasayfa /index.html 301
+/home.html /index.html 301
+/home /index.html 301
+
+/legal/kvkk-disclosure.html /legal/kvkk-aydinlatma-metni 301
