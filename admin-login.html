@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Girişi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net; connect-src 'self' https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com; img-src 'self' data: blob: https:;">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <style>
+        body { display: flex; align-items: center; justify-content: center; min-height: 100vh; background-color: #f0f2f5; }
+        .login-card { max-width: 400px; width: 100%; border: none; }
+    </style>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CSCL2KYTFF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CSCL2KYTFF');
+</script>
+</head>
+<body>
+    <div class="card login-card shadow-lg">
+        <div class="card-body p-5">
+            <h3 class="card-title text-center mb-4">Admin Paneli Girişi</h3>
+            <form id="loginForm">
+                <div class="mb-3">
+                    <label for="password" class="form-label">Şifre</label>
+                    <input type="password" class="form-control" id="password" required>
+                </div>
+                
+                <!-- Cloudflare Turnstile CAPTCHA -->
+                <div class="mb-3 d-flex justify-content-center">
+                    <div class="cf-turnstile" data-sitekey="0x4AAAAAABuAA4UaEd43Ty1M" data-callback="onTurnstileSuccess" data-theme="light"></div>
+                </div>
+                
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary" id="loginBtn" disabled>Giriş Yap</button>
+                </div>
+                <div id="error-message" class="text-danger mt-3 text-center" style="min-height: 1.5rem;"></div>
+            </form>
+        </div>
+    </div>
+    <script>
+        let turnstileToken = null;
+        
+        // Turnstile başarılı olduğunda çağrılır
+        function onTurnstileSuccess(token) {
+            turnstileToken = token;
+            document.getElementById('loginBtn').disabled = false;
+            console.log('Turnstile doğrulaması başarılı');
+        }
+
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const password = document.getElementById('password').value;
+            const errorEl = document.getElementById('error-message');
+            errorEl.textContent = '';
+
+            // Turnstile token kontrolü
+            if (!turnstileToken) {
+                errorEl.textContent = 'Lütfen güvenlik doğrulamasını tamamlayın.';
+                return;
+            }
+
+            try {
+                const response = await fetch('/api/admin/login', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    credentials: 'include',
+                    body: JSON.stringify({ 
+                        password: password,
+                        turnstileToken: turnstileToken 
+                    })
+                });
+
+                // 405 hatası kontrol et
+                if (response.status === 405) {
+                    errorEl.textContent = 'API endpoint\'i bulunamadı. Functions deploy edilmemiş olabilir.';
+                    return;
+                }
+
+                // Response boş mu kontrol et
+                const contentType = response.headers.get('content-type');
+                if (!contentType || !contentType.includes('application/json')) {
+                    errorEl.textContent = 'Sunucu geçersiz yanıt döndü. Functions çalışmıyor olabilir.';
+                    return;
+                }
+
+                const result = await response.json();
+                console.log('Login response:', result); // Debug için
+    
+                if (result.success) {
+                    // Cookie otomatik olarak tarayıcı tarafından ayarlandı
+                    console.log('Giriş başarılı, cookie ayarlandı'); // Debug için
+                    
+                    // Admin paneline yönlendir
+                    window.location.href = '/admin.html';
+                } else {
+                    errorEl.textContent = result.message || 'Giriş başarısız.';
+                    // Hatalı denemeden sonra Turnstile'ı sıfırla
+                    turnstileToken = null;
+                    document.getElementById('loginBtn').disabled = true;
+                    if (typeof turnstile !== 'undefined') {
+                        turnstile.reset();
+                    }
+                }
+            } catch (error) {
+                console.error("Giriş sırasında hata:", error);
+                if (error.name === 'SyntaxError' && error.message.includes('JSON')) {
+                    errorEl.textContent = 'Sunucu yanıtı okunamadı. Functions deploy edilmemiş olabilir.';
+                } else {
+                    errorEl.textContent = 'Bağlantı hatası. İnternet bağlantınızı kontrol edin.';
+                }
+                // Hata durumunda da Turnstile'ı sıfırla
+                turnstileToken = null;
+                document.getElementById('loginBtn').disabled = true;
+                if (typeof turnstile !== 'undefined') {
+                    turnstile.reset();
+                }
+            }
+        });
+    </script>
+</body>
+</html>

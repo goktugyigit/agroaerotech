@@ -1,0 +1,1731 @@
+/* AgroAeroTech Custom CSS */
+:root {
+  --brand: #1aa44e;
+  --black: #0b0b0b;
+  --white: #ffffff;
+  --muted: #6b7280;
+  --bs-primary: #1aa44e;
+  --greenColor: #1aa44e;
+  --greenColor600: #158a42;
+}
+
+/* Global Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: var(--black);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Links */
+a {
+  color: var(--black);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--brand);
+}
+
+/* Header Section */
+.header-top {
+  background: var(--white);
+  padding: 20px 0;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.header-brand-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-brand-container img {
+  height: 100px;
+  width: auto;
+}
+
+/* Navigation */
+.navbar {
+  z-index: 1050;
+  transition: all 0.3s ease;
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Fixed navbar için */
+.navbar.fixed-top {
+  position: fixed !important;
+  top: 0;
+  background: #ffffff !important;
+  z-index: 1050 !important;
+}
+
+/* Navbar scroll efekti */
+.navbar-scrolled {
+  background: rgba(255, 255, 255, 0.98) !important;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Navbar mobil iyileştirmeleri - Sıfıra sıfır başlayan */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background: #ffffff;
+    border-radius: 0;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    margin-top: 0;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1049;
+  }
+
+  /* Hamburger menü temizlenmiş stiller */
+  .navbar-toggler {
+    border: none;
+    background-color: transparent !important;
+    padding: 4px 8px;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
+  }
+
+  .navbar-toggler i {
+    font-size: 1.5rem;
+    color: #2EA124;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navbar-toggler:hover i {
+    color: #247E1D;
+  }
+
+  /* Hamburger icon animasyonu - açıkken çarpıya dönüşür */
+  .navbar-toggler[aria-expanded="true"] i.fa-bars::before {
+    content: "\f00d";
+    /* fa-times (çarpı) ikonu */
+  }
+
+  .navbar-toggler[aria-expanded="true"] i {
+    transform: rotate(180deg);
+  }
+}
+
+.navbar-brand {
+  padding: 0;
+}
+
+.navbar-brand img {
+  height: 50px;
+  width: auto;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+.navbar-nav {
+  margin: 0 auto;
+  align-items: center;
+  /* Butonun dikeyde ortalanması için */
+}
+
+.navbar-nav .nav-link {
+  color: var(--black) !important;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+  margin: 0 10px;
+  display: inline-flex;
+  align-items: center;
+  /* yazı ve oku dikeyde ortala */
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: var(--brand) !important;
+}
+
+.navbar-nav .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: var(--brand);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  width: 100%;
+}
+
+.navbar-nav .nav-link.active {
+  color: var(--brand) !important;
+}
+
+/* Navbar toggler genel stiller mobil bölümde tanımlandı */
+
+/* Buttons */
+.btn-brand {
+  background-color: var(--brand);
+  border-color: var(--brand);
+  color: var(--white);
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-brand:hover,
+.btn-brand:focus {
+  background-color: var(--brand);
+  border-color: var(--brand);
+  color: var(--white);
+  filter: brightness(0.92);
+  transform: translateY(-1px);
+}
+
+/* Navbar-specific button style */
+.navbar .btn-brand {
+  background-color: transparent;
+  border: 2px solid var(--black);
+  color: var(--black);
+}
+
+.navbar .btn-brand:hover,
+.navbar .btn-brand:focus,
+.navbar .btn-brand.active {
+  background-color: var(--brand);
+  border-color: var(--brand);
+  color: var(--white);
+  filter: none;
+  /* Reset filter */
+}
+
+.btn-outline-brand {
+  color: var(--brand);
+  border-color: var(--brand);
+  background-color: transparent;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-brand:hover,
+.btn-outline-brand:focus {
+  background-color: var(--brand);
+  border-color: var(--brand);
+  color: var(--white);
+  transform: translateY(-1px);
+}
+
+/* Cards */
+.card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Hero Section */
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Service Cards */
+.service-card {
+  text-align: center;
+  padding: 2rem 1rem;
+  height: 100%;
+}
+
+.service-card .icon {
+  font-size: 3rem;
+  color: var(--brand);
+  margin-bottom: 1rem;
+}
+
+/* Form Styles */
+.form-control:focus {
+  border-color: var(--brand);
+  box-shadow: 0 0 0 0.2rem rgba(26, 164, 78, 0.25);
+}
+
+.is-invalid {
+  border-color: #dc3545;
+}
+
+/* Alerts */
+.alert-success {
+  background-color: rgba(26, 164, 78, 0.1);
+  border-color: var(--brand);
+  color: var(--brand);
+}
+
+.alert-danger {
+  background-color: rgba(220, 53, 69, 0.1);
+  border-color: #dc3545;
+  color: #dc3545;
+}
+
+/* Footer */
+.footer-dark {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.footer-dark a {
+  color: var(--white);
+  transition: color 0.3s ease;
+}
+
+.footer-dark .footer-links a {
+  color: var(--white);
+  text-decoration: none;
+  display: inline-block;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-dark .footer-links a:hover {
+  color: #22c55e !important;
+  transform: translateX(2px);
+}
+
+.footer-dark .footer-bottom-link {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  display: inline-block;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-dark .footer-bottom-link:hover {
+  color: #22c55e !important;
+}
+
+.footer-dark .footer-heading-link {
+  transition: color 0.3s ease;
+}
+
+.footer-dark .footer-heading-link:hover {
+  color: #22c55e !important;
+}
+
+/* Footer Social Media Icons - GÜNCELLENMİŞ VE DOĞRU STİLLER */
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.social-icon:hover {
+  color: var(--white) !important;
+  box-shadow: none;
+  text-decoration: none;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.social-icon i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+/* Platforma Özel Hover Arka Plan Renkleri */
+.social-icon:hover .fa-facebook-f {
+  background-color: #1877F2;
+}
+
+.social-icon:hover .fa-x-twitter {
+  background-color: #000000;
+}
+
+.social-icon:hover .fa-linkedin-in {
+  background-color: #0A66C2;
+}
+
+.social-icon:hover .fa-youtube {
+  background-color: #FF0000;
+}
+
+.social-icon:hover .fa-instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+/* Make all footer text white */
+.footer-dark .text-muted {
+  color: var(--white) !important;
+}
+
+.footer-dark p {
+  color: var(--white) !important;
+}
+
+/* Responsive */
+@media (min-width: 1400px) {
+  .hero-content {
+    max-width: 780px;
+  }
+}
+
+/* Ultra Responsive Mobile Navbar - Professional Design */
+@media (max-width: 991px) {
+
+  /* Navbar sabit yükseklik */
+  .navbar {
+    min-height: 56px !important;
+  }
+
+  .header-top {
+    padding: 15px 0;
+  }
+
+  .header-brand-container img {
+    height: 80px;
+  }
+
+  .navbar-brand img {
+    height: 40px;
+  }
+
+  /* Mobile Navbar Toggler - Temizlenmiş */
+  .navbar-toggler {
+    border: none;
+    background-color: transparent !important;
+    padding: 4px 8px;
+    position: relative;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
+  }
+
+  /* Font Awesome hamburger ikonu */
+  .navbar-toggler i {
+    font-size: 1.5rem;
+    color: #2EA124;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navbar-toggler:hover i {
+    color: #247E1D;
+  }
+
+  /* Hamburger icon animasyonu - açıkken çarpıya dönüşür */
+  .navbar-toggler[aria-expanded="true"] i.fa-bars::before {
+    content: "\f00d";
+    /* fa-times (çarpı) ikonu */
+  }
+
+  .navbar-toggler[aria-expanded="true"] i {
+    transform: rotate(180deg);
+  }
+
+  /* Mobile Menu Container - Sıfıra sıfır başlayan tasarım */
+  .navbar-collapse {
+    background: #ffffff;
+    margin-top: 0;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    border: 1px solid #e9ecef;
+    animation: slideDown 0.4s ease-out;
+    transform-origin: top;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1049;
+  }
+
+  @keyframes slideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px) scale(0.95);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  /* Mobile Navigation Items - Clean List Style */
+  .navbar-nav {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 0;
+    border-bottom: 1px solid #e9ecef;
+  }
+
+
+
+  .navbar-nav .nav-link {
+    color: #333 !important;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 18px 20px;
+    text-align: left;
+    margin: 0;
+    transition: all 0.3s ease;
+    position: relative;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+  }
+
+  .navbar-nav .nav-link:hover {
+    background: #f8f9fa;
+    color: var(--brand) !important;
+    border-radius: 15px;
+  }
+
+  .navbar-nav .nav-link.active {
+    background: transparent !important;
+    color: var(--brand) !important;
+    font-weight: 500 !important;
+    border-radius: 0 !important;
+  }
+
+  /* Remove the left border animation for cleaner look */
+  .navbar-nav .nav-link::before {
+    display: none;
+  }
+
+  /* Mobile Dropdown Styling - Clean Design - DÜZELTME */
+  .navbar-nav .dropdown-menu {
+    position: static !important;
+    transform: none !important;
+    box-shadow: none;
+    border: none;
+    background: #f8f9fa;
+    margin: 0;
+    border-radius: 0;
+    padding: 0;
+    display: none !important;
+    border-top: 1px solid #e9ecef;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .navbar-nav .dropdown-menu.show {
+    display: block !important;
+    animation: expandDown 0.3s ease-out;
+  }
+
+  @keyframes expandDown {
+    0% {
+      opacity: 0;
+      max-height: 0;
+    }
+
+    100% {
+      opacity: 1;
+      max-height: 300px;
+    }
+  }
+
+  .navbar-nav .dropdown-item {
+    color: #555;
+    font-size: 0.95rem;
+    padding: 15px 40px;
+    text-align: left;
+    transition: all 0.3s ease;
+    position: relative;
+    border-bottom: 1px solid #e9ecef;
+    background: transparent;
+  }
+
+  .navbar-nav .dropdown-item:last-child {
+    border-bottom: none;
+  }
+
+  .navbar-nav .dropdown-item:hover {
+    background: #ffffff;
+    color: var(--brand);
+  }
+
+  /* Remove arrow indicators for cleaner look */
+  .navbar-nav .dropdown-item::before {
+    display: none;
+  }
+
+  /* Mobile Submenu Styling - Clean Design - DÜZELTME */
+  .navbar-nav .dropdown-submenu .submenu {
+    position: static !important;
+    transform: none !important;
+    box-shadow: none;
+    border: none;
+    background: #ffffff;
+    margin: 0;
+    border-radius: 0;
+    display: none !important;
+    border-top: 1px solid #e9ecef;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .navbar-nav .dropdown-submenu.show .submenu,
+  .navbar-nav .submenu.show,
+  .navbar-nav .dropdown-submenu:hover .submenu {
+    display: block !important;
+    animation: expandDown 0.3s ease-out;
+  }
+
+  .navbar-nav .submenu .dropdown-item {
+    padding: 12px 50px;
+    font-size: 0.9rem;
+    color: #666;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .navbar-nav .submenu .dropdown-item:last-child {
+    border-bottom: none;
+  }
+
+  .navbar-nav .submenu .dropdown-item:hover {
+    color: var(--brand);
+    background: #f8f9fa;
+  }
+
+  /* Mobil submenu toggle indicator */
+  .navbar-nav .dropdown-submenu>.dropdown-item.dropdown-toggle::after {
+    content: '\f078';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    float: right;
+    margin-left: 10px;
+    font-size: 0.8rem;
+    color: #666;
+    transition: transform 0.3s ease;
+  }
+
+  .navbar-nav .dropdown-submenu.show>.dropdown-item.dropdown-toggle::after {
+    transform: rotate(180deg);
+    color: var(--brand);
+  }
+
+  /* Remove submenu indicators */
+  .navbar-nav .submenu .dropdown-item::before {
+    display: none;
+  }
+
+  /* Mobile CTA Button - Same as Desktop */
+  .navbar .btn-brand {
+    background-color: transparent;
+    border: 2px solid var(--black);
+    color: var(--black);
+    font-weight: 500;
+    padding: 8px 20px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    width: auto;
+    text-align: center;
+    margin-top: 0;
+    display: inline-block;
+  }
+
+  .navbar .btn-brand:hover,
+  .navbar .btn-brand:focus,
+  .navbar .btn-brand.active {
+    background-color: var(--brand);
+    border-color: var(--brand);
+    color: var(--white);
+    transform: none;
+    box-shadow: none;
+  }
+
+  /* Mobile Dropdown Indicators */
+  .navbar-nav .dropdown-toggle .dropdown-indicator {
+    transition: transform 0.3s ease;
+    margin-left: auto;
+  }
+
+  .navbar-nav .dropdown.show .dropdown-toggle .dropdown-indicator {
+    transform: rotate(180deg);
+  }
+
+  /* Mobile Typography */
+  h1,
+  .display-4 {
+    font-size: 2.5rem;
+  }
+
+  h2,
+  .display-5 {
+    font-size: 2rem;
+  }
+
+  section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+/* Hide dropdown arrow completely */
+.navbar-nav .dropdown-toggle::after {
+  display: none;
+}
+
+/* Dropdown menu styling - Enhanced */
+.dropdown-menu {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  padding: 1rem 0;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-top: 0.5rem;
+  min-width: 220px;
+  transform: translateY(-5px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown-menu.show {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Dropdown item styling - Enhanced */
+.dropdown-item {
+  padding: 10px 18px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--black);
+  font-weight: 500;
+  font-size: 0.9rem;
+  position: relative;
+  border-radius: 8px;
+  margin: 2px 8px;
+}
+
+.dropdown-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 0;
+  background: linear-gradient(135deg, var(--brand), #22c55e);
+  border-radius: 2px;
+  transition: height 0.3s ease;
+}
+
+/* Dropdown elemanlarının tüm durumları için stil */
+.dropdown-item.active,
+.dropdown-item:active,
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background: linear-gradient(135deg, rgba(26, 164, 78, 0.1), rgba(34, 197, 94, 0.1));
+  color: var(--brand);
+  transform: translateX(5px);
+  box-shadow: 0 2px 8px rgba(26, 164, 78, 0.2);
+}
+
+.dropdown-item:hover::before {
+  height: 20px;
+}
+
+
+/* Sertifika Sorgulama butonu ikonu için özel stil */
+.navbar .btn-brand .fa-certificate {
+  color: #EFBF04;
+  /* Altın Rengi */
+  transition: color 0.3s ease;
+}
+
+/* Butonun üzerine gelindiğinde ikonun rengini de metin gibi beyaz yapar */
+.navbar .btn-brand:hover .fa-certificate {
+  color: var(--white);
+}
+
+/* Sertifika Sorgulama sayfası başlık ikonu */
+.display-4>.fa-certificate {
+  color: #EFBF04;
+  /* Altın Sarısı */
+}
+
+/* Navbar'daki Sertifika Sorgulama butonunun üzerine gelme ve aktif durum stili */
+.navbar .btn-brand:hover,
+.navbar .btn-brand:focus,
+.navbar .btn-brand.active {
+  background-color: var(--black);
+  /* Arka planı siyah yap */
+  border-color: var(--black);
+  /* Kenarlık rengini de siyah yap */
+  color: var(--white);
+  /* Yazı ve ikon rengini beyaz yap */
+}
+
+/* Navbar'daki Sertifika Sorgulama butonunun üzerine gelindiğinde/aktif olduğunda,
+   ikonun renginin altın rengi olarak kalmasını sağlayan kural */
+.navbar .btn-brand:hover .fa-certificate,
+.navbar .btn-brand:focus .fa-certificate,
+.navbar .btn-brand.active .fa-certificate {
+  color: #EFBF04;
+  /* Altın Rengini Koru */
+}
+
+/* Enhanced Dropdown okları için stil ve animasyon */
+.dropdown-indicator {
+  font-size: 0.75rem;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0.7;
+  margin-left: 8px !important;
+}
+
+.nav-link:hover .dropdown-indicator {
+  opacity: 1;
+  color: var(--brand);
+}
+
+/* Dropdown menü açıldığında oku 180 derece döndür ve rengini değiştir */
+.dropdown-toggle[aria-expanded="true"] .dropdown-indicator {
+  transform: rotate(180deg);
+  color: var(--brand);
+  opacity: 1;
+}
+
+/* Nav link hover effects enhanced */
+.navbar-nav .nav-link {
+  position: relative;
+  overflow: hidden;
+}
+
+.navbar-nav .nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--brand), #22c55e);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover::before,
+.navbar-nav .nav-link.active::before {
+  width: 100%;
+}
+
+/* Remove the old ::after pseudo-element */
+.navbar-nav .nav-link::after {
+  display: none;
+}
+
+/* Submenu Dropdown Styles - Enhanced */
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu .submenu {
+  position: absolute;
+  top: -8px;
+  left: 98%;
+  min-width: 280px;
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-15px) translateZ(-10px);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: none;
+  border-radius: 12px;
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.2),
+    0 8px 25px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  padding: 1.2rem 0;
+  z-index: 999;
+  background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.dropdown-submenu>.dropdown-item {
+  position: relative;
+  padding-right: 45px;
+}
+
+.dropdown-submenu>.dropdown-item::after {
+  content: '\f054';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.75rem;
+  color: var(--muted);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  opacity: 0.6;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-submenu>.dropdown-item:hover::after {
+  color: var(--brand);
+  transform: translateY(-50%) translateX(4px) scale(1.1);
+  opacity: 1;
+  text-shadow: 0 2px 4px rgba(26, 164, 78, 0.3);
+}
+
+/* Submenu items styling */
+.dropdown-submenu .submenu .dropdown-item {
+  font-size: 0.85rem;
+  padding: 10px 20px;
+  color: var(--black);
+  font-weight: 500;
+  position: relative;
+  border-radius: 8px;
+  margin: 1px 6px;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);
+}
+
+.dropdown-submenu .submenu .dropdown-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 0;
+  background: linear-gradient(135deg, var(--brand), #22c55e);
+  border-radius: 2px;
+  transition: height 0.3s ease;
+}
+
+.dropdown-submenu .submenu .dropdown-item:hover {
+  background: linear-gradient(135deg, rgba(26, 164, 78, 0.12), rgba(34, 197, 94, 0.08));
+  color: var(--brand);
+  transform: translateX(6px) translateY(-1px);
+  box-shadow:
+    0 4px 12px rgba(26, 164, 78, 0.25),
+    0 2px 6px rgba(26, 164, 78, 0.15);
+  text-shadow: 0 1px 2px rgba(26, 164, 78, 0.2);
+}
+
+.dropdown-submenu .submenu .dropdown-item:hover::before {
+  height: 20px;
+}
+
+/* Mobile responsive submenu */
+@media (max-width: 991px) {
+  .dropdown-submenu .submenu {
+    position: static;
+    display: none;
+    box-shadow: none;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    margin: 0.5rem 1rem;
+    padding: 0.5rem 0;
+  }
+
+  .dropdown-submenu:hover .submenu {
+    display: none;
+  }
+
+  .dropdown-submenu.show .submenu {
+    display: block;
+  }
+}
+
+/* Hover effect for reference logos */
+.hover-opacity-100:hover {
+  opacity: 1 !important;
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+/* Mobil navbar: sola hizala (≤991.98px) */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    align-items: stretch !important;
+  }
+
+  .navbar-nav {
+    margin: 0 !important;
+    width: 100% !important;
+    align-items: stretch !important;
+  }
+
+  .navbar-nav .nav-link,
+  .navbar-nav .dropdown-item {
+    text-align: left !important;
+    justify-content: flex-start !important;
+  }
+}
+
+/* Navbar container düzeltmesi - Sabit pozisyon */
+@media (max-width: 991.98px) {
+  .navbar>.container {
+    position: relative;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    flex-wrap: nowrap !important;
+    width: 100% !important;
+    min-height: 56px !important;
+  }
+
+  /* Logo'nun sabit pozisyonu */
+  .navbar-brand {
+    position: absolute !important;
+    left: 15px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    margin: 0 !important;
+    flex-shrink: 0;
+    z-index: 1051;
+  }
+
+  /* Bize Ulaşın butonunun sabit pozisyonu */
+  .navbar .btn-contact {
+    position: absolute !important;
+    right: 70px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    margin: 0 !important;
+    flex-shrink: 0;
+    z-index: 1051;
+  }
+
+  /* Hamburger butonunun sabit pozisyonu */
+  .navbar-toggler {
+    position: absolute !important;
+    right: 15px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    margin: 0 !important;
+    flex-shrink: 0;
+    z-index: 1051;
+  }
+
+  /* Bootstrap margin sınıflarını iptal et */
+  .navbar-brand.me-auto {
+    margin-right: 0 !important;
+  }
+
+  .btn-contact.me-2 {
+    margin-right: 0 !important;
+  }
+}
+
+/* Referanslar Mobil Düzeltmeleri - Temizlenmiş */
+@media (max-width: 991.98px) {
+  .references-section .row {
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .references-section .col-lg-2,
+  .references-section .col-md-3,
+  .references-section .col-4 {
+    flex: 0 0 auto;
+    width: 33.333333% !important;
+    max-width: 33.333333% !important;
+    padding: 15px 10px;
+    text-align: center;
+  }
+
+  .references-section img {
+    max-width: 100%;
+    height: auto;
+    max-height: 50px;
+    object-fit: contain;
+    filter: grayscale(20%);
+    transition: all 0.3s ease;
+  }
+
+  .references-section img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 575.98px) {
+
+  .references-section .col-lg-2,
+  .references-section .col-md-3,
+  .references-section .col-4 {
+    width: 50% !important;
+    max-width: 50% !important;
+    padding: 12px 8px;
+  }
+
+  .references-section img {
+    max-height: 40px;
+  }
+}
+
+/* Mobil
+/* FIX: Mobile navbar yan kayma ve üst boşluk */
+@media (max-width: 991.98px) {
+
+  /* Navbar zaten fixed-top. Genişliği garanti altına alalım */
+  .navbar {
+    left: 0;
+    right: 0;
+  }
+
+  .navbar-collapse {
+    position: fixed;
+    /* container etkisinden kurtul */
+    top: var(--nav-h, 56px);
+    /* navbar yüksekliği kadar aşağıdan başla */
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 0 !important;
+    border-radius: 0;
+    transform: none !important;
+    /* yana kaymayı bitirir */
+    animation: none !important;
+    /* yukarıdan aşağı sallanmayı kapatır */
+    border-top: 0;
+    /* en üstte 1 px boşluk görünmesin */
+    z-index: 1049;
+  }
+
+  /* Menü açıkken arka planın scroll etmesini engellemek isterseniz */
+  body.offcanvas-open {
+    overflow: hidden;
+  }
+}
+
+/* Masaüstünde hover ile dropdown aç */
+@media (min-width: 992px) {
+  .navbar .dropdown:hover>.dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .navbar .dropdown-menu {
+    margin-top: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.15s ease-in-out, visibility 0.15s ease-in-out;
+  }
+}
+
+/* AcuSpray tarzı Bize Ulaşın butonu */
+.btn-contact {
+  background-color: #28a745;
+  /* yeşil */
+  color: #fff;
+  font-weight: 600;
+  /* 700 yerine 600 biraz daha dengeli */
+  font-size: 14px;
+  /* yazıyı küçülttük */
+  border: none;
+  border-radius: 3px;
+  /* köşeler daha keskin */
+  padding: 8px 18px;
+  /* daha kompakt */
+  line-height: 1.3;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background-color .2s ease, transform .15s ease;
+  width: auto;
+  /* genişlik otomatik */
+}
+
+.btn-contact:hover,
+.btn-contact:focus {
+  background-color: #247E1D;
+  /* hover rengi */
+  color: #fff;
+}
+
+/* ≤991.98px: Mobil menüde hover/active arka planlarını ve radius'u kapat */
+@media (max-width: 991.98px) {
+
+  .navbar-nav .nav-link,
+  .navbar-nav .nav-link:hover,
+  .navbar-nav .nav-link:focus,
+  .navbar-nav .nav-link.active {
+    background: transparent !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .navbar-nav .dropdown-menu,
+  .navbar-nav .submenu {
+    background: #fff !important;
+    /* gri/açık-yeşil yerine düz beyaz */
+    border-radius: 0 !important;
+  }
+
+  .navbar-nav .dropdown-item:hover {
+    background: transparent !important;
+  }
+}
+
+/* Aktif öğe: sadece yeşil yazı, arka plan yok, font-weight değişmesin */
+.navbar .nav-link.active,
+.navbar .dropdown-item.active {
+  color: var(--brand) !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  transform: none !important;
+  font-weight: 500 !important;
+  /* Normal font-weight kalsın */
+}
+
+/* Aktif öğelerin hover davranışı normal linkler gibi olsun */
+.navbar .nav-link.active:hover,
+.navbar .nav-link.active:focus,
+.navbar .dropdown-item.active:hover,
+.navbar .dropdown-item.active:focus {
+  color: var(--brand) !important;
+  /* Hover'da da yeşil kalsın */
+  background: transparent !important;
+  box-shadow: none !important;
+  transform: none !important;
+  font-weight: 500 !important;
+}
+
+/* Mobilde de arka planı tamamen kaldır */
+@media (max-width: 991.98px) {
+
+  .navbar-nav .nav-link.active,
+  .navbar-nav .dropdown-item.active {
+    background: transparent !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    font-weight: 500 !important;
+  }
+
+  .navbar-nav .nav-link.active:hover,
+  .navbar-nav .nav-link.active:focus,
+  .navbar-nav .dropdown-item.active:hover,
+  .navbar-nav .dropdown-item.active:focus {
+    background: transparent !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    font-weight: 500 !important;
+  }
+}
+
+/*
+ Hero Fullscreen Section */
+.hero-fullscreen {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-fullscreen img {
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero-fullscreen .hero-overlay {
+  z-index: 2;
+}
+
+.hero-fullscreen .container {
+  z-index: 3;
+}
+
+/* Fallback background for missing images - Removed dark green background */
+.hero-fullscreen::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent; /* Koyu yeşil arka plan kaldırıldı */
+  z-index: 0;
+}
+
+/* Object fit polyfill for older browsers */
+.object-fit-cover {
+  object-fit: cover;
+  font-family: 'object-fit: cover;';
+}
+
+/* Z-index utilities */
+.z-10 {
+  z-index: 10;
+}
+
+/* Form enhancements */
+.form-control:focus {
+  border-color: var(--brand);
+  box-shadow: 0 0 0 0.2rem rgba(26, 164, 78, 0.25);
+}
+
+.btn-success {
+  background-color: var(--brand);
+  border-color: var(--brand);
+}
+
+.btn-success:hover {
+  background-color: var(--greenColor600);
+  border-color: var(--greenColor600);
+}
+
+/* File input styling */
+.form-control[type="file"] {
+  padding: 0.375rem 0.75rem;
+}
+
+.form-text {
+  font-size: 0.875em;
+  color: var(--muted);
+}
+
+/* Alert positioning */
+.alert {
+  border-radius: 0.5rem;
+}
+
+/* Content
+ sections styling */
+.card.border-success .card-header {
+  border-bottom: 2px solid var(--brand);
+}
+
+.card.border-warning .card-header {
+  border-bottom: 2px solid #ffc107;
+}
+
+.card.border-info .card-header {
+  border-bottom: 2px solid #0dcaf0;
+}
+
+/* Smooth scroll offset for fixed navbar */
+html {
+  scroll-padding-top: 80px;
+}
+
+/* Enhanced button styling */
+.btn-success.btn-lg {
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(26, 164, 78, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-success.btn-lg:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(26, 164, 78, 0.4);
+}
+
+/* Content cards enhancement */
+.bg-light {
+  background-color: #f8f9fa !important;
+}
+
+/* Icon styling */
+.fas.fa-check-circle {
+  font-size: 1.2rem;
+}
+
+/* Call to action section */
+.bg-success.text-white.p-4.rounded {
+  background: linear-gradient(135deg, var(--brand) 0%, var(--greenColor600) 100%) !important;
+  box-shadow: 0 4px 15px rgba(26, 164, 78, 0.2);
+}
+
+/* WhatsApp Widget Styles */
+.whatsapp-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  background-color: #25d366;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  animation: pulse 2s infinite;
+}
+
+.whatsapp-widget:hover {
+  background-color: #128c7e;
+  transform: scale(1.1);
+  box-shadow: 0 6px 25px rgba(37, 211, 102, 0.6);
+  text-decoration: none;
+}
+
+.whatsapp-widget i {
+  color: white;
+  font-size: 28px;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-widget:hover i {
+  color: white;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  }
+  50% {
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.7);
+  }
+  100% {
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+  }
+}
+
+/* Mobile responsive WhatsApp widget */
+@media (max-width: 768px) {
+  .whatsapp-widget {
+    bottom: 15px;
+    right: 15px;
+    width: 55px;
+    height: 55px;
+  }
+  
+  .whatsapp-widget i {
+    font-size: 24px;
+  }
+}
+
+/* Language Selector Styles */
+.language-selector {
+  position: relative;
+  display: inline-block;
+}
+
+.language-selector .dropdown-toggle {
+  background: transparent;
+  border: 1px solid #dee2e6;
+  color: var(--black);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.language-selector .dropdown-toggle:hover {
+  background-color: #f8f9fa;
+  border-color: var(--brand);
+  color: var(--brand);
+}
+
+.language-selector .dropdown-toggle::after {
+  display: none;
+}
+
+.language-selector .flag-icon {
+  width: 20px;
+  height: 15px;
+  border-radius: 2px;
+  object-fit: cover;
+  display: inline-block;
+  border: 1px solid #ddd;
+}
+
+/* SVG bayrakları için ek stiller */
+.flag-icon {
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.language-selector .dropdown-menu {
+  min-width: 140px;
+  padding: 8px 0;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.language-selector .dropdown-item {
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.language-selector .dropdown-item:hover {
+  background-color: rgba(26, 164, 78, 0.1);
+  color: var(--brand);
+}
+
+.language-selector .dropdown-item.active {
+  background-color: rgba(26, 164, 78, 0.15);
+  color: var(--brand);
+  font-weight: 500;
+}
+
+/* Mobile language selector */
+@media (max-width: 991.98px) {
+  .language-selector {
+    width: 100%;
+    margin: 8px 0;
+  }
+  
+  .language-selector .dropdown-toggle {
+    width: 100%;
+    justify-content: space-between;
+    padding: 12px 16px;
+    border: none;
+    border-bottom: 1px solid #e9ecef;
+    border-radius: 0;
+  }
+  
+  .language-selector .dropdown-menu {
+    position: static !important;
+    transform: none !important;
+    box-shadow: none;
+    border: none;
+    background: #f8f9fa;
+    margin: 0;
+    border-radius: 0;
+    width: 100%;
+  }
+}
+
+/* Mobile navbar font fix — Poppins render & ağırlık */
+@media (max-width: 991.98px) {
+
+  .navbar,
+  .navbar .nav-link,
+  .navbar .dropdown-item {
+    font-family: 'Poppins', sans-serif !important;
+    -webkit-font-smoothing: antialiased;t-rendering: optimizeLegibility;
+  }
+}
+
+/* Mobil görünümde buton ve başlık arasındaki boşlukları düzenle */
+@media (max-width: 767.98px) {
+
+  /* Tarımsal çözümler başlıklarını ortala */
+  #scroll-1 h4,
+  #scroll-2 h4,
+  #scroll-3 h4 {
+    text-align: center !important;
+  }
+
+  /* Buton ile üstteki başlık arasındaki boşluğu azalt */
+  #scroll-1 .btn-outline-brand,
+  #scroll-2 .btn-outline-brand,
+  #scroll-3 .btn-outline-brand {
+    margin-top: 1rem !important;
+  }
+
+  /* Resim ile buton arasındaki boşluğu azalt */
+  #scroll-1 img,
+  #scroll-2 img,
+  #scroll-3 img {
+    margin-bottom: 1rem !important;
+  }
+
+  /* Bölümler arası boşlukları azalt */
+  #scroll-1,
+  #scroll-2,
+  #scroll-3 {
+    margin-bottom: 3rem !important;
+  }
+}
+
+bar .nav-link {
+  font-weight: 600 !important;
+}
+}
+
+/*
+ Ultra katı doğrulama görselliği */
+.form-control.is-invalid {
+  border-color: #dc3545 !important;
+}
+
+.form-control.is-valid {
+  border-color: #198754 !important;
+}
+
+.invalid-feedback {
+  display: block;
+  font-size: .875rem;
+  color: #dc3545;
+}
+
+.char-counter {
+  font-size: .8rem;
+  opacity: .75;
+  margin-top: .25rem;
+  text-align: right;
+}
+
+/* ===== CHECKBOX STYLES - OPTİMİZE VERSİYON ===== */
+.form-check-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 1.25em;
+  height: 1.25em;
+  margin-top: 0.125em;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border: 2px solid #dee2e6;
+  border-radius: 0.25em;
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
+}
+
+.form-check-input:focus {
+  border-color: var(--brand);
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(26, 164, 78, 0.25);
+}
+
+.form-check-input:checked {
+  background-color: var(--brand);
+  border-color: var(--brand);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
+  position: relative;
+}
+
+/* Fallback için pseudo-element ile tik işareti */
+.form-check-input:checked::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 0.9em;
+  font-weight: bold;
+  line-height: 1;
+  display: none; /* Sadece SVG yüklenemezse görünecek */
+}
+
+/* SVG yüklenemezse fallback'i göster */
+@supports not (background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e")) {
+  .form-check-input:checked::after {
+    display: block;
+  }
+  .form-check-input:checked {
+    background-image: none;
+  }
+}
+
+/* JavaScript fallback sınıfı */
+.form-check-input.checkbox-fallback:checked {
+  background-image: none !important;
+}
+
+.form-check-input.checkbox-fallback:checked::after {
+  display: block !important;
+}
+
+.form-check-input:checked:focus {
+  border-color: var(--brand);
+  box-shadow: 0 0 0 0.25rem rgba(26, 164, 78, 0.25);
+}
+
+.form-check-input:hover:not(:disabled):not(:checked) {
+  border-color: var(--brand);
+  background-color: rgba(26, 164, 78, 0.1);
+}
+
+/* Invalid state */
+.form-check-input.is-invalid {
+  border-color: #dc3545;
+}
+
+.form-check-input.is-invalid:focus {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+}
+
+.form-check-input.is-invalid~.form-check-label {
+  color: #dc3545;
+}
+
+/* Label styling */
+.form-check-label {
+  cursor: pointer;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-left: 0.5rem;
+}
+
+/* Container */
+.form-check {
+  display: block;
+  min-height: 1.5rem;
+  padding-left: 0;
+  margin-bottom: 0.125rem;
+}
+
+.form-check .form-check-input {
+  float: left;
+  margin-left: 0;
+}
+
+.form-check .form-check-label {
+  display: block;
+  margin-left: 2rem;
+}

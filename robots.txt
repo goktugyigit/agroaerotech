@@ -1,0 +1,17 @@
+# AgroAeroTech Robots.txt
+# Allow all search engines to crawl
+
+User-agent: *
+Allow: /
+
+# Disallow admin and API endpoints
+Disallow: /admin.html
+Disallow: /admin-login.html
+Disallow: /functions/
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://agroaerotech.com/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1

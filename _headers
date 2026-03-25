@@ -1,0 +1,131 @@
+# ==============================================
+# AgroAeroTech - HTTP Security & Performance Headers
+# ==============================================
+
+# Global Security Headers (Tüm Sayfalar)
+/*
+  # XSS Koruması
+  X-XSS-Protection: 1; mode=block
+  
+  # Clickjacking Koruması
+  X-Frame-Options: SAMEORIGIN
+  
+  # MIME Type Sniffing Koruması
+  X-Content-Type-Options: nosniff
+  
+  # Referrer Policy
+  Referrer-Policy: strict-origin-when-cross-origin
+  
+  # Permissions Policy (Gereksiz özellikleri kapat)
+  Permissions-Policy: geolocation=(self "https://www.google.com" "https://maps.google.com"), microphone=(), camera=(), payment=()
+  
+  # Content Security Policy (Güvenli kaynaklardan yükleme)
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://www.googletagmanager.com https://challenges.cloudflare.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://fonts.googleapis.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https: https://media.agroaerotech.com; media-src 'self' https://media.agroaerotech.com; connect-src 'self' https://www.google-analytics.com https://challenges.cloudflare.com; frame-src 'self' https://challenges.cloudflare.com https://www.google.com https://maps.google.com;
+  
+  # Strict Transport Security (HTTPS zorunlu)
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  
+  # Cache Control (Genel)
+  Cache-Control: public, max-age=3600
+
+# HTML Sayfaları (Daha kısa cache)
+/*.html
+  Cache-Control: public, max-age=1800, must-revalidate
+  X-Robots-Tag: index, follow
+
+# CSS Dosyaları (Uzun cache)
+/assets/css/*
+  Cache-Control: public, max-age=31536000, immutable
+  Access-Control-Allow-Origin: *
+
+# JavaScript Dosyaları (Uzun cache)
+/assets/js/*
+  Cache-Control: public, max-age=31536000, immutable
+  Access-Control-Allow-Origin: *
+
+# Görseller (Uzun cache)
+/assets/img/*
+  Cache-Control: public, max-age=31536000, immutable
+  Access-Control-Allow-Origin: *
+
+# Video Dosyaları (Uzun cache)
+/assets/videos/*
+  Cache-Control: public, max-age=31536000, immutable
+  Access-Control-Allow-Origin: *
+
+# Font Dosyaları (Uzun cache + CORS)
+/assets/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+  Access-Control-Allow-Origin: *
+
+# Bayrak İkonları
+/assets/img/flags/*
+  Cache-Control: public, max-age=31536000, immutable
+  Access-Control-Allow-Origin: *
+
+# API Endpoints (Cache yok)
+/api/*
+  Cache-Control: no-store, no-cache, must-revalidate
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+
+# Admin Sayfaları (Ekstra güvenlik)
+/admin*
+  X-Frame-Options: DENY
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-store, no-cache, must-revalidate, private
+
+# Functions (Cloudflare Workers)
+/functions/*
+  Cache-Control: no-store, no-cache, must-revalidate
+  X-Content-Type-Options: nosniff
+
+# Sitemap & Robots (SEO)
+/sitemap.xml
+  Content-Type: application/xml
+  Cache-Control: public, max-age=86400
+  X-Robots-Tag: index, follow
+
+/robots.txt
+  Content-Type: text/plain
+  Cache-Control: public, max-age=86400
+
+# Ana Sayfa (Özel optimizasyon)
+/index.html
+  Cache-Control: public, max-age=1800, must-revalidate
+  X-Robots-Tag: index, follow
+  Link: </assets/css/custom.css>; rel=preload; as=style
+  Link: </assets/js/main.js>; rel=preload; as=script
+
+# İletişim Formu (Güvenlik + Google Maps)
+/contact.html
+  X-Frame-Options: SAMEORIGIN
+  Cache-Control: public, max-age=1800, must-revalidate
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://www.googletagmanager.com https://challenges.cloudflare.com https://unpkg.com https://maps.googleapis.com https://maps.gstatic.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://fonts.googleapis.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https: https://maps.googleapis.com https://maps.gstatic.com *.google.com *.gstatic.com; connect-src 'self' https://www.google-analytics.com https://challenges.cloudflare.com https://maps.googleapis.com; frame-src 'self' https://challenges.cloudflare.com https://www.google.com https://maps.google.com;
+
+# Sertifika Sorgulama (Güvenlik)
+/certificate-verification.html
+  X-Frame-Options: DENY
+  Cache-Control: no-store, no-cache, must-revalidate
+  X-Robots-Tag: noindex, nofollow
+
+# Eğitim Sayfaları (SEO optimizasyonu)
+/education/*
+  Cache-Control: public, max-age=3600, must-revalidate
+  X-Robots-Tag: index, follow
+
+# Hizmetler Sayfaları (SEO optimizasyonu + Video desteği)
+/services/*
+  Cache-Control: public, max-age=3600, must-revalidate
+  X-Robots-Tag: index, follow
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://www.googletagmanager.com https://challenges.cloudflare.com https://unpkg.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://fonts.googleapis.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https: https://media.agroaerotech.com; media-src 'self' https://media.agroaerotech.com; connect-src 'self' https://www.google-analytics.com https://challenges.cloudflare.com; frame-src 'self' https://challenges.cloudflare.com https://www.google.com https://maps.google.com;
+
+# Blog (SEO optimizasyonu)
+/blog.html
+  Cache-Control: public, max-age=1800, must-revalidate
+  X-Robots-Tag: index, follow
+
+# Legal Sayfalar
+/legal/*
+  Cache-Control: public, max-age=86400
+  X-Robots-Tag: noindex, follow

@@ -1,0 +1,213 @@
+/* Custom Cursor Effects - Yeşil Çember + Normal Cursor */
+
+/* Custom Cursor Ring (Yeşil Çember) - %30 küçültülmüş */
+.custom-cursor {
+    position: fixed;
+    width: 29px;
+    height: 29px;
+    border: 2px solid #1aa44e;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    background: transparent;
+    box-shadow: 0 0 6px rgba(26, 164, 78, 0.3);
+}
+
+/* Magnifying Glass Lens Effect */
+.magnifier-lens {
+    position: fixed;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    backdrop-filter: blur(0px);
+    overflow: hidden;
+}
+
+.magnifier-lens.active {
+    opacity: 1;
+}
+
+.magnifier-lens::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%) scale(1.1);
+    border-radius: 50%;
+    box-shadow: inset 0 0 20px rgba(26, 164, 78, 0.1),
+                0 0 15px rgba(26, 164, 78, 0.15);
+    border: 2px solid rgba(26, 164, 78, 0.3);
+}
+
+.custom-cursor.active {
+    opacity: 1;
+}
+
+/* Cursor hover effect - Çember büyür (border kalınlığı SABİT) */
+.custom-cursor.hover {
+    transform: translate(-50%, -50%) scale(1.19);
+    box-shadow: 0 0 12px rgba(26, 164, 78, 0.5);
+}
+
+/* Cursor click effect - Çember küçülür */
+.custom-cursor.click {
+    transform: translate(-50%, -50%) scale(0.7);
+    background-color: rgba(26, 164, 78, 0.2);
+}
+
+/* Click Ripple Effect */
+.click-ripple {
+    position: fixed;
+    border-radius: 50%;
+    background-color: rgba(26, 164, 78, 0.4);
+    pointer-events: none;
+    z-index: 9998;
+    animation: ripple-animation 0.6s ease-out;
+}
+
+@keyframes ripple-animation {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+
+    100% {
+        width: 80px;
+        height: 80px;
+        opacity: 0;
+    }
+}
+
+/* Mobile touch ripple */
+.touch-ripple {
+    position: fixed;
+    border-radius: 50%;
+    background-color: rgba(26, 164, 78, 0.5);
+    pointer-events: none;
+    z-index: 9998;
+    animation: touch-ripple-animation 0.8s ease-out;
+}
+
+@keyframes touch-ripple-animation {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(0);
+    }
+
+    50% {
+        opacity: 0.6;
+    }
+
+    100% {
+        width: 100px;
+        height: 100px;
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/* Mobile - hide custom cursor, show touch ripples */
+@media (max-width: 768px) {
+    .custom-cursor {
+        display: none !important;
+    }
+}
+
+/* Desktop - show custom cursor */
+@media (min-width: 769px) {
+    .touch-ripple {
+        display: none !important;
+    }
+
+    /* Map container - ensure cursor is visible over iframe */
+    .map-container {
+        position: relative;
+    }
+
+    .map-container iframe {
+        cursor: default !important;
+    }
+}
+
+/* Normal cursor görünür olsun - sadece desktop'ta */
+@media (min-width: 769px) {
+
+    /* Varsayılan - normal ok cursor */
+    * {
+        cursor: default !important;
+    }
+
+    /* Yazılar ve paragraflar - normal ok cursor */
+    p:not(a *):not(button *):not(.btn *):not(.dropdown-item *):not(.nav-link *),
+    h1:not(a *):not(button *):not(.btn *),
+    h2:not(a *):not(button *):not(.btn *),
+    h3:not(a *):not(button *):not(.btn *),
+    h4:not(a *):not(button *):not(.btn *),
+    h5:not(a *):not(button *):not(.btn *),
+    h6:not(a *):not(button *):not(.btn *),
+    span:not(a *):not(button *):not(.btn *):not(.dropdown-item *):not(.nav-link *),
+    div:not(a *):not(button *):not(.btn *):not(.card):not(.service-option):not(.education-option),
+    li:not(a *):not(button *):not(.btn *),
+    label:not([for]):not(a *):not(button *):not(.btn *),
+    .text-muted:not(a *):not(button *):not(.btn *),
+    .lead:not(a *):not(button *):not(.btn *),
+    article:not(a *):not(button *):not(.btn *),
+    section:not(a *):not(button *):not(.btn *) {
+        cursor: default !important;
+    }
+
+    /* Text inputlarda text cursor (I-beam) */
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    input[type="password"],
+    input[type="search"],
+    textarea,
+    [contenteditable="true"] {
+        cursor: text !important;
+    }
+
+    /* Interactive elementlerde pointer (el) - EN YÜKSEK ÖNCELİK */
+    a,
+    a *,
+    button,
+    button *,
+    input[type="submit"],
+    input[type="button"],
+    .btn,
+    .btn *,
+    .dropdown-item,
+    .dropdown-item *,
+    .nav-link,
+    .nav-link *,
+    .card,
+    .card *,
+    .service-option,
+    .service-option *,
+    .education-option,
+    .education-option *,
+    .service-card,
+    .service-card *,
+    .language-selector,
+    .language-selector *,
+    .navbar-toggler,
+    .navbar-toggler *,
+    .navbar-brand,
+    .navbar-brand * {
+        cursor: pointer !important;
+    }
+}
